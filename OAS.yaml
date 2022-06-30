@@ -596,11 +596,6 @@ components:
       type: object
       description: 'Serializer for location details, including contact details, address and opening times.'
       properties:
-        id:
-          type: string
-          format: uuid
-          description: De identificatie die binnen deze API gebruikt wordt voor de resource.
-          readOnly: true
         url:
           type: string
           format: uri
@@ -638,7 +633,6 @@ components:
         openingstijden:
           $ref: '#/components/schemas/Openingstijden'
       required:
-        - id
         - url
         - naam
         - straat
@@ -907,11 +901,6 @@ components:
       type: object
       description: 'Serializer for a product, including UPN, availability, locations and latest version translations.'
       properties:
-        id:
-          type: string
-          format: uuid
-          description: De identificatie die binnen deze API gebruikt wordt voor de resource.
-          readOnly: true
         url:
           type: string
           format: uri
@@ -958,7 +947,6 @@ components:
           items:
             $ref: '#/components/schemas/LocalizedProduct'
       required:
-        - id
         - url
         - upnLabel
         - upnUri
@@ -975,11 +963,6 @@ components:
       description: 'Serializer for ProductenCatalogus details, including organizations and products.'
       title: Catalogus
       properties:
-        id:
-          type: string
-          format: uuid
-          description: De identificatie die binnen deze API gebruikt wordt voor de resource.
-          readOnly: true
         url:
           type: string
           format: uri
@@ -1015,7 +998,6 @@ components:
           items:
             $ref: '#/components/schemas/Product'
       required:
-        - id
         - url
         - domein
         - naam
